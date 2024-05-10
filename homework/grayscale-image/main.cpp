@@ -1,12 +1,15 @@
 #include <array>
 #include <forward_list>
+#include<cstdint>
+#include "compression.hpp"
+#include<iostream>
 
 // TODO: include
 
 std::array<std::array<uint8_t, 32>, 32> generateNinja() {
     return {
         std::array<uint8_t, 32>{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 36, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42, 36, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 11, 29, 52, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 51, 29, 10, 0, 0, 0, 0, 0, 0, 0, 0},
+        {10, 0, 0, 0, 0, 0, 0, 0, 11, 29, 52, 56, 56, 56, 56, 56, 56, 56, 56, 56, 56, 51, 29, 10, 0, 0, 0, 0, 0, 0, 0, 0},
         {0, 0, 0, 0, 0, 2, 12, 6, 21, 43, 64, 68, 68, 68, 68, 68, 68, 68, 68, 68, 68, 64, 47, 25, 8, 0, 0, 0, 0, 0, 0, 0},
         {0, 0, 0, 0, 0, 33, 93, 61, 46, 57, 87, 93, 93, 93, 93, 93, 93, 93, 93, 93, 93, 93, 93, 93, 76, 0, 0, 0, 0, 0, 0, 0},
         {0, 0, 0, 0, 0, 15, 53, 71, 79, 81, 127, 136, 136, 136, 136, 136, 136, 136, 136, 136, 136, 136, 136, 87, 52, 0, 0, 0, 0, 0, 0, 0},
@@ -41,11 +44,14 @@ std::array<std::array<uint8_t, 32>, 32> generateNinja() {
 }
 
 int main() {
+ 
     auto ninja = generateNinja();
+    //std::cout<<"EEEEEEEEEEEc "<<unsigned(ninja[1][10]);//height width
     // printMap(ninja);
     auto compressed = compressGrayscale(ninja);
-    auto decompressed = decompressGrayscale(compressed);
+    //auto decompressed = decompressGrayscale(compressed);
     // printMap(decompressed);
+    for(auto a:  compressed)std::cout<<unsigned(a.first)<<" "<<unsigned(a.second)<<", \n";
 
     return 0;
 }
