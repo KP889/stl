@@ -1,8 +1,8 @@
 #include <array>
+#include <cstdint>
 #include <forward_list>
-#include<cstdint>
+#include <iostream>
 #include "compression.hpp"
-#include<iostream>
 
 // TODO: include
 
@@ -44,14 +44,12 @@ std::array<std::array<uint8_t, 32>, 32> generateNinja() {
 }
 
 int main() {
- 
     auto ninja = generateNinja();
-    //std::cout<<"EEEEEEEEEEEc "<<unsigned(ninja[1][10]);//height width
-    // printMap(ninja);
+
+    printMap(ninja);
     auto compressed = compressGrayscale(ninja);
-    //auto decompressed = decompressGrayscale(compressed);
-    // printMap(decompressed);
-    for(auto a:  compressed)std::cout<<unsigned(a.first)<<" "<<unsigned(a.second)<<", \n";
+    auto decompressed = decompressGrayscale(compressed);
+    printMap(decompressed);
 
     return 0;
 }
