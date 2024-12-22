@@ -1,5 +1,16 @@
 #include <array>
 #include <forward_list>
+#include "compression.hpp"
+#include "compression.hpp"
+#include <algorithm>
+#include <array>
+#include <forward_list>
+#include <iostream>
+#include <iterator>
+#include <string.h>
+#include <utility>
+#include <vector>
+
 
 // TODO: include
 
