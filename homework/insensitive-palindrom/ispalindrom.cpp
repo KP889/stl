@@ -17,8 +17,16 @@ bool is_palindrome(std::string phraseToTest) {
                             ? true
                             : false;
                });
+
+  std::copy(PlaceHolder.begin(), PlaceHolder.end(),
+            std::ostream_iterator<char>(std::cout, ""));
+  std::cout << "\n";
   std::transform(PlaceHolder.begin(), PlaceHolder.end(), PlaceHolder.begin(),
                  [](unsigned char c) { return std::tolower(c); });
+  PlaceHolder.shrink_to_fit();
+  std::cout << "elem 28 " << PlaceHolder[28] << "\n";
+  std::copy(PlaceHolder.begin(), PlaceHolder.end(),
+            std::ostream_iterator<char>(std::cout, ""));
 
   return std::equal(PlaceHolder.cbegin(), PlaceHolder.cend(),
                     PlaceHolder.crbegin());
