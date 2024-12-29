@@ -1,6 +1,6 @@
 #include "ispalindrom.hpp"
 #include <algorithm>
-#include <array>
+
 #include <iostream>
 #include <iterator>
 #include <string.h>

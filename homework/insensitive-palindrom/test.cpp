@@ -1,4 +1,13 @@
+#include "ispalindrom.hpp"
 #include "gtest/gtest.h"
+#include <algorithm>
+#include <iostream>
+#include <iterator>
+#include <string.h>
+#include <utility>
+#include <vector>
+#include"cctype"
+
 
 // TODO: Includes
 
