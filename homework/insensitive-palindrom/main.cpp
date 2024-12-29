@@ -1,11 +1,12 @@
-#include "ispalindrom.hpp"
-#include <algorithm>
+#include <string.h>
 
+#include <algorithm>
 #include <iostream>
 #include <iterator>
-#include <string.h>
 #include <utility>
 #include <vector>
+
+#include "ispalindrom.hpp"
 
 int main() {
   std::string s{"Eva, can I see bees in a cave?"};

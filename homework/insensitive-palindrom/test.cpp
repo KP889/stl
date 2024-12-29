@@ -1,12 +1,14 @@
-#include "cctype"
-#include "ispalindrom.hpp"
-#include "gtest/gtest.h"
+#include <string.h>
+
 #include <algorithm>
 #include <iostream>
 #include <iterator>
-#include <string.h>
 #include <utility>
 #include <vector>
+
+#include "cctype"
+#include "gtest/gtest.h"
+#include "ispalindrom.hpp"
 
 // TODO: Includes
 
@@ -18,7 +20,8 @@ TEST_P(InsensitivePalindromFixture, CheckPalindrome) {
 }
 
 INSTANTIATE_TEST_SUITE_P(
-    InsensitivePalindromTests, InsensitivePalindromFixture,
+    InsensitivePalindromTests,
+    InsensitivePalindromFixture,
     ::testing::Values(
         std::make_pair("a", true),
         std::make_pair("aba", true),
