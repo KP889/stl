@@ -1,3 +1,4 @@
+#include "cctype"
 #include "ispalindrom.hpp"
 #include "gtest/gtest.h"
 #include <algorithm>
@@ -6,8 +7,6 @@
 #include <string.h>
 #include <utility>
 #include <vector>
-#include"cctype"
-
 
 // TODO: Includes
 

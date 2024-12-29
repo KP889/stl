@@ -8,7 +8,8 @@
 #include <vector>
 
 int main() {
+  std::string s{"Eva, can I see bees in a cave?"};
 
-  // is_palindrome(std::string);
+  std::cout << is_palindrome(s);
   return 0;
 }
