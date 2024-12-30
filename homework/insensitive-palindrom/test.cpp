@@ -16,7 +16,7 @@ class InsensitivePalindromFixture
     : public ::testing::TestWithParam<std::pair<std::string, bool>> {};
 
 TEST_P(InsensitivePalindromFixture, CheckPalindrome) {
-  EXPECT_EQ(is_palindrome(GetParam().first), GetParam().second);
+    EXPECT_EQ(is_palindrome(GetParam().first), GetParam().second);
 }
 
 INSTANTIATE_TEST_SUITE_P(

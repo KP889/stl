@@ -9,8 +9,8 @@
 #include "ispalindrom.hpp"
 
 int main() {
-  std::string s{"Eva, can I see bees in a cave?"};
+    std::string s{"Eva, can I see bees in a cave?"};
 
-  std::cout << std::boolalpha << is_palindrome(s);
-  return 0;
+    std::cout << std::boolalpha << is_palindrome(s);
+    return 0;
 }
