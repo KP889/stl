@@ -9,3 +9,4 @@
 #include <vector>
 
 bool is_palindrome(std::string phraseToTest);
+
