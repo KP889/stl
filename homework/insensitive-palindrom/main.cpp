@@ -1,11 +1,9 @@
 #include <string.h>
-
 #include <algorithm>
 #include <iostream>
 #include <iterator>
 #include <utility>
 #include <vector>
-
 #include "ispalindrom.hpp"
 
 int main() {
